@@ -78,6 +78,6 @@ TypeScript file (`.ts`) → **TypeScript Compiler (TSC)** দিয়ে compile �
  
 এটা অনেকটা এরকম: আপনি Bengali-তে চিঠি লিখেছেন, কিন্তু post office শুধু English বোঝে। তাই আগে translator (TSC) দিয়ে translate করতে হয়, তারপর পাঠাও।
 
-##Bottom Line
+## Bottom Line
 - JavaScript flexibility দেয়
 - TypeScript control দেয়

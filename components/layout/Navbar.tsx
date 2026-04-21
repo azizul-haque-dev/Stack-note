@@ -65,7 +65,7 @@ export default function Navbar({ topics, activeTopic }: NavbarProps) {
             <span className="material-symbols-outlined">account_circle</span>
           </button>
         </div>
-        <button className="bg-gradient-to-br from-primary to-primary-container text-on-primary px-3 md:px-4 py-2 rounded-md font-bold text-xs md:text-sm active:scale-95 transition-all">
+        <button className="bg-linear-to-br from-primary to-primary-container text-on-primary px-3 md:px-4 py-2 rounded-md font-bold text-xs md:text-sm active:scale-95 transition-all">
           New Draft
         </button>
       </div>

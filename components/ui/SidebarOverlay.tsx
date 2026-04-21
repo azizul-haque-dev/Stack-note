@@ -14,7 +14,7 @@ export default function SidebarOverlay() {
   return (
     <div
       id="sidebar-overlay"
-      className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[55]"
+      className="fixed inset-0 bg-black/60 backdrop-blur-xs z-55"
       onClick={handleClose}
     />
   );

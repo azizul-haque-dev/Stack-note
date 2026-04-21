@@ -137,7 +137,7 @@ export default async function DocPage({
         <Sidebar tree={tree} activeSlug={activeSlug} />
 
         {/* Main content */}
-        <main className="flex-1 w-full md:ml-64 lg:mr-72 px-4 py-8 md:px-8 lg:px-16 max-w-full overflow-x-hidden">
+        <main className="flex-1 w-full md:ml-64 xl:mr-72 px-4 py-8 md:px-8 lg:px-16">
           {/* Mobile TOC Dropdown */}
           {mobileTocItems.length > 0 && (
             <div className="lg:hidden mb-6">
@@ -181,13 +181,13 @@ export default async function DocPage({
           {/* Breadcrumbs */}
           <nav
             aria-label="Breadcrumb"
-            className="flex items-center gap-2 text-[10px] md:text-[11px] font-bold text-on-surface-variant/60 uppercase tracking-widest mb-6 md:mb-8 overflow-x-auto whitespace-nowrap"
+            className="flex hide-scrollbar items-center gap-2 text-[10px] md:text-[11px] font-bold text-on-surface-variant/60 uppercase tracking-widest mb-6 md:mb-8 whitespace-nowrap touch-pan-x overflow-x-auto h-6 overflow-y-hidden "
           >
             <Link className="hover:text-primary" href="/">
               Docs
             </Link>
             {breadcrumbs.map((crumb) => (
-              <span key={crumb.href} className="flex items-center gap-2">
+              <span key={crumb.href} className="flex items-center gap-2 srink-0">
                 <span className="material-symbols-outlined text-xs">
                   chevron_right
                 </span>
@@ -259,7 +259,7 @@ export default async function DocPage({
         </main>
 
         {/* Right TOC — dynamic headings extracted from markdown */}
-        <RightToc headings={headings} />
+        {/* <RightToc headings={headings} /> */}
       </div>
 
       {/* Floating Action Toolbar — unchanged */}
@@ -270,7 +270,7 @@ export default async function DocPage({
         <button className="p-2 text-on-surface-variant hover:text-primary transition-colors">
           <span className="material-symbols-outlined text-lg">visibility</span>
         </button>
-        <div className="w-[1px] h-4 bg-outline-variant/20 mx-1" />
+        <div className="w-px h-4 bg-outline-variant/20 mx-1" />
         <button className="p-2 text-on-surface-variant hover:text-primary transition-colors">
           <span className="material-symbols-outlined text-lg">share</span>
         </button>

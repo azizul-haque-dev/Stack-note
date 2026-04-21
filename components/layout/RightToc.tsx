@@ -38,7 +38,7 @@ export default function RightToc({ headings }: RightTocProps) {
                 : "pl-10";
 
             const activeClass = isFirstH1
-              ? "border-l-2 border-primary -ml-[1px]"
+              ? "border-l-2 border-primary -ml-px"
               : "";
 
             const textClass = isFirstH1

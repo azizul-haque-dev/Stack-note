@@ -1,9 +1,95 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Space+Grotesk:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Space+Grotesk:wght@300;400;500;700&display=swap')
+layer(utilities);
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap')
+layer(utilities);
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-inverse-surface: #e2e2e2;
+  --color-on-primary-fixed-variant: #005047;
+  --color-on-secondary: #620040;
+  --color-primary-fixed: #62fae3;
+  --color-on-primary-container: #00423b;
+  --color-tertiary-fixed: #ffdf9f;
+  --color-surface-container-low: #1b1b1b;
+  --color-surface-dim: #131313;
+  --color-on-surface-variant: #bbcac6;
+  --color-surface-container: #1f1f1f;
+  --color-on-primary-fixed: #00201c;
+  --color-secondary-fixed: #ffd8e7;
+  --color-on-secondary-fixed: #3d0026;
+  --color-surface-container-highest: #353535;
+  --color-on-tertiary: #402d00;
+  --color-secondary-container: #85145a;
+  --color-on-error: #690005;
+  --color-secondary: #ffafd3;
+  --color-on-tertiary-fixed: #261a00;
+  --color-on-tertiary-fixed-variant: #5c4300;
+  --color-outline-variant: #3c4947;
+  --color-on-background: #e2e2e2;
+  --color-surface-container-high: #2a2a2a;
+  --color-inverse-primary: #006b5f;
+  --color-background: #131313;
+  --color-tertiary-container: #d09c00;
+  --color-surface-bright: #393939;
+  --color-primary: #3cddc7;
+  --color-surface-variant: #353535;
+  --color-primary-fixed-dim: #3cddc7;
+  --color-on-primary: #003731;
+  --color-error: #ffb4ab;
+  --color-surface-tint: #3cddc7;
+  --color-on-tertiary-container: #4c3700;
+  --color-inverse-on-surface: #303030;
+  --color-secondary-fixed-dim: #ffafd3;
+  --color-on-secondary-fixed-variant: #85145a;
+  --color-tertiary-fixed-dim: #f9bd22;
+  --color-surface: #131313;
+  --color-on-surface: #e2e2e2;
+  --color-error-container: #93000a;
+  --color-outline: #859490;
+  --color-tertiary: #f9bd22;
+  --color-on-error-container: #ffdad6;
+  --color-primary-container: #00b8a5;
+  --color-on-secondary-container: #ff93c8;
+  --color-surface-container-lowest: #0e0e0e;
+
+  --radius: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+
+  --font-headline: Manrope, sans-serif;
+  --font-body: Manrope, sans-serif;
+  --font-label: Space Grotesk, sans-serif;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+@utility hide-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined';

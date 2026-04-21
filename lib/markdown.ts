@@ -103,7 +103,7 @@ const renderCodeBlock = cache(
     const titleAttribute = title ? ` data-title="${escapeHtml(title)}"` : "";
 
     return [
-      `<figure class="md-code-block" data-language="${escapeHtml(language)}"${titleAttribute}>`,
+      `<figure class="md-code-block hide-scrollbar" data-language="${escapeHtml(language)}"${titleAttribute}>`,
       `<figcaption class="md-code-block__header">`,
       `<span class="md-code-block__label">${label}</span>`,
       `<button`,
@@ -115,7 +115,7 @@ const renderCodeBlock = cache(
       `<span class="md-code-block__copy-label" data-copy-label>COPY</span>`,
       `</button>`,
       `</figcaption>`,
-      `<div class="md-code-block__body">`,
+      `<div class="md-code-block__body hide-scrollbar">`,
       highlightedHtml,
       `</div>`,
       `</figure>`,

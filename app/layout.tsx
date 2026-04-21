@@ -43,7 +43,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-body text-on-surface antialiased bg-black">
+      <body className="font-body hide-scrollbar text-on-surface antialiased bg-black">
         {children}
       </body>
     </html>

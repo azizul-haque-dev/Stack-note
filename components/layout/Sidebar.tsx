@@ -24,7 +24,8 @@ export default function Sidebar({ tree, activeSlug }: SidebarProps) {
   return (
     <aside
       id="left-sidebar"
-      className="fixed left-0 top-0 md:top-16 w-64 h-full md:h-[calc(100vh-64px)] bg-[#0A0A0A] border-r border-outline-variant/10 overflow-y-auto"
+      className="fixed hide-scrollbar
+touch-pan-x left-0 top-0 md:top-16 w-64 h-full md:h-[calc(100vh-64px)] bg-[#0A0A0A] border-r border-outline-variant/10 overflow-y-auto"
     >
       <div className="p-6">
         {/* Mobile header — unchanged */}
