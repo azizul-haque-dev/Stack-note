@@ -16,14 +16,12 @@ function greet(name) {
 
 console.log(greet("Azizul"));  // ✅ Hello Azizul
 console.log(greet(42)); 
-// ⚠️ Hello 42 — এইটা কি করল পুরাই gender change ?
-console.log(greet(true));      // ⚠️ Hello true — এটা কি চাই ছিলাম ?
+// Hello 42 — এইটা কি করল পুরাই gender change ?
+console.log(greet(true));      //  Hello true — এটা কি চাই ছিলাম ?
 ```
 
 **বাংলায়:** আমাকে আপনি বললেন "টাকা" দাও , কিন্তু আমি টাকা না দিয়ে দিলাম অন্য কিছু  — তখন আপনি কি বলবেন I dont mind যেইটা javascript করে । একটা চিৎকার দিয়ে বলবলেন টাকা দেন  TypeScript ও চিৎকার করে বলবে না এটা ঠিক না!"
 
-
-### ⚙️ Under the Hood
 
 JavaScript হলো **dynamically typed** language। মানে variable-এর type code  run করার সময়  decide হয়, compile time-এ না।
 এতে অসুবিধা হলো :
@@ -32,7 +30,7 @@ JavaScript হলো **dynamically typed** language। মানে variable-এ
 - Bug production ছাড়া catch করা যায় না 
 - বড় team-এ code maintain করা কঠিন হয়ে পরে 
 
-### 💻 Code Examples
+###  Code Examples
 
 **Example 1 — Basic Problem (JavaScript)**
 ```js
@@ -40,10 +38,10 @@ function addNumbers(a, b) {
   return a + b;
 }
 console.log(addNumbers(5, 3));      // ✅ 8
-console.log(addNumbers("5", 3));   // ⚠️ "53" — string concatenation হয়ে গেছে!
+console.log(addNumbers("5", 3));   // ❌ "53" — string concatenation হয়ে গেছে!
 ```
 
-### 🚫 Common Mistakes
+###  Common Mistakes
 
 ```js
 // ভুল: Type না জেনে calculation
@@ -58,7 +56,7 @@ calculateTax("50000"); // NaN — silent bug!
 - JavaScript শেষ করার পরেই TypeScript শিখা শুরু করা 
 - আপনি TypeScript কে "JavaScript" "এর strict mode" মনে করতে পারেন 
 
-### 🔥 When to Use
+### When to Use
 - যেকোনো production-grade project-এ
 - Team collaboration এ
 
@@ -70,7 +68,7 @@ calculateTax("50000"); // NaN — silent bug!
 
 **Note:** TypeScript মানে JavaScript-এর উপরে কিছু extra power দেওয়া। সব valid JavaScript code ই valid TypeScript code — কিন্তু সব TypeScript code, valid JavaScript না।
 
-### ⚙️ Under the Hood
+###  Under the Hood
 
 TypeScript file (`.ts`) → **TypeScript Compiler (TSC)** দিয়ে compile হয়ে → JavaScript file (`.js`) হয় 
 
